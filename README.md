@@ -1,5 +1,7 @@
 # 📅 Agendai
 
+🔗 **Link do Projeto:** [Clique aqui para acessar](https://agendai-ec37a.web.app)
+
 O **Agendai** é um ecossistema de agendamento e gestão financeira desenvolvido para prestadores de serviços, com foco inicial em barbearias. O sistema funciona como um **PWA (Progressive Web App)**, permitindo que o profissional gerencie sua agenda e finanças diretamente pelo celular ou computador como se fosse um aplicativo nativo.
 
 ---
