@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.app-container {
+    width: 90%;
+    max-width: 400px;
+    background: 
+    linear-gradient(145deg, rgba(15, 15, 15, 0.95), rgba(5, 5, 5, 0.98)),
+    url('images/fundo-textura.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #cca43b;
+    border-radius: 30px;
+    box-shadow: 
+        0 0 15px rgba(204, 164, 59, 0.4),
+        10px 10px 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-container * {
+    z-index: 1;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-placeholder {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(145deg, #222, #111);
+    border-radius: 50%;
+    border: 3px solid #cca43b;
+    margin: 0 auto 20px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 
+        inset 5px 5px 10px rgba(0,0,0,0.5),
+        0 0 15px rgba(204, 164, 59, 0.3);
+}
+
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1.title-gold {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    background: linear-gradient(to bottom, #fff8dc 0%, #cca43b 50%, #b38f32 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5));
+}
+
+p {
+    color: #888;
+    margin-top: 5px;
+}
+
+/*Botões */
+
+.btn-primary {
+    width: 100%;
+    max-width: 300px;
+    background: linear-gradient(145deg, #dcb855, #b38f32);
+    color: #1a1a1a;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.2s ease;
+    box-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.4), /* Sombra externa */
+        -1px -1px 2px rgba(255, 255, 255, 0.2), /* Luz externa */
+        inset 2px 2px 3px rgba(255, 255, 255, 0.4), /* Luz interna topo */
+        inset -2px -2px 3px rgba(0, 0, 0, 0.3); /* Sombra interna fundo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.btn-primary:hover {
+    background: linear-gradient(145deg, #e7c770, #c4a045);
+    transform: translateY(-2px);
+    box-shadow: 
+        5px 5px 10px rgba(0, 0, 0, 0.4),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary:active {
+    background: linear-gradient(145deg, #b38f32, #dcb855);
+    box-shadow: 
+        inset 3px 3px 5px rgba(0, 0, 0, 0.3),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.1);
+    transform: translateY(1px);
+}
+
+.container-links {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.secondary-text {
+    display: block;
+    color: #cca43b;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: opacity 0.3s;
+    font-weight: 500;
+}
+
+.secondary-text:hover {
+    opacity: 0.8;
+}
+
+.link-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #cca43b;
+}
+
+.link-cadastro::before {
+    content: "•";
+    color: #b38f32;
+    font-size: 1.2rem;
+}
+
+.title-gold {
+    color: #cca43b;
+    margin-bottom: 10px;
+}
+
+.btn-hora {
+    background-color: #1e1e1e;
+    color: #cca43b;
+    border: 1px solid #cca43b;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-hora:hover {
+    background-color: #cca43b;
+    color: #121212;
+}
+
+.btn-back {
+    background: transparent;
+    color: #888;
+    border: none;
+    margin-top: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form-group {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-dark {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-dark:focus {
+    border-color: #cca43b;
+}
+
+strong {
+    color: #cca43b;
+}
+
+ .card-agendamento {
+    background: #1e1e1e;
+    border-left: 4px solid #cca43b;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: left;
+ }
+
+ .btn-servico {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 22px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.btn-servico:hover {
+    border-color: #cca43b;
+    transform: translateY(-2px);
+    background-color: #252525;
+}
+
+.btn-servico span:last-child {
+    color: #cca43b;
+    font-weight: bold;
+}
+
+.btn-hora.ocupado {
+    background-color: #333 !important;
+    color: #666 !important;
+    border-color: #444 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.card-agendamento button {
+    transition: transform 0.2s;
+}
+
+.card-agendamento button:active {
+    transform: scale(0.9);
+}
+
+button[onclick*="excluirAgendamento"]:hover {
+    filter: grayscale(0%) sepia(100%) hue-rotate(-50deg) saturate(600%) !important;
+}
+
+@media (max-width: 600px) {
+
+    .logo-placeholder {
+        width: 80px !important;
+        height: 80px !important;
+        border-radius: 50% !important;
+    }
+
+    .logo-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+#calendar-container {
+    margin: 20px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.input-date {
+    background-color: #1a1a1a;
+    color: #d4af37;           
+    border: 1px solid #d4af37;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    cursor: pointer;
+    color-scheme: dark;
+}
+
+.input-date:focus {
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+    background-color: #252525;
+}
+
+.label-gold {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    min-height: 200px; /* Garante que o espaço já esteja reservado */
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.btn-tab {
+    background: transparent;
+    color: #888;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-tab.active {
+    color: #cca43b;
+}
+
+.carrossel-graficos {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    max-width: 100% !important;
+    max-height: 250px !important;
+}
+
+#admin-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.resumo-financeiro, 
+.balanco-semanal, 
+.card-despesas, 
+.card-filtro,
+.configuracoes-container { 
+    background: #1a1a1a !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    border: 1px solid #333 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.resumo-financeiro p, 
+.resumo-financeiro label, 
+.label-gold, 
+.card-filtro p {
+    color: #cca43b !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.resumo-financeiro h3, .balanco-semanal h3, .card-filtro h3 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 1rem !important;
+}
+
+.form-group-datas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group-datas div {
+    flex: 1;
+}
+.input-dark, .input-date {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}

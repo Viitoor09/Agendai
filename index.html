@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <title>Agendai - Barbearia</title>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo-placeholder">
+                <img src="images/icon.png" alt="logo">
+            </div>
+
+            <link rel="icon" href="images/icon.png">
+
+            <h1 class="title-gold">Agendai</h1>
+            <p>Seu estilo, na hora certa.</p>
+        </header>
+        
+        <main id="main-content">
+            <section id="home-screen" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                
+                <button class="btn-primary" onclick="iniciarAgendamento()">
+                Agendar Meu Corte
+                </button>
+
+                <div class="container-links" style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                <a href="#" onclick="exibirLoginBarbeiro()" class="secondary-text">Acessar Painel do Barbeiro</a>
+                <a href="#" onclick="exibirCadastroBarbeiro()" class="secondary-text link-cadastro">
+                Quero ser um parceiro (Cadastrar)
+                </a>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js?v=2.55"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
